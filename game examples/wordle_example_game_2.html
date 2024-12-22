@@ -1,0 +1,3223 @@
+<!doctype html>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>Wordle demo</title>
+</head>
+<body>
+<h1>Wordle game explorer</h1>
+<p>Use this page to explore how the game state dictionary changes as the wordle game is played</p>
+<p>Click on the links to move forwards through the game</p>
+<p>Click <a href="#1">here</a> to start.<p>
+
+<br>
+<hr>
+<section id="1">
+<h3>Step 1:</h3>
+<a href="#idx_prev">Back</a>&nbsp;<a href="#2">Forward</a><br>
+<pre>
+game_state = {
+    'wordle_words_file': wordle_words.txt, 
+    'all_words_file': english_dict.txt,
+    'max_guesses': 6, 'word_length': 5, 
+    'secret_word': shall,
+    'status': playing, 
+    'i': 0, 'j': 0, 
+    'grid': 
+         [ ['', '', '', '', '']
+           ['', '', '', '', '']
+           ['', '', '', '', '']
+           ['', '', '', '', '']
+           ['', '', '', '', '']
+           ['', '', '', '', ''] ], 
+    'colour_grid': 
+         [ ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w'] ],
+    'popup_queue': []
+    }
+
+				
+?	?	?	?	?
+-	-	-	-	-	
+
+
+last command entered: -
+<pre>
+</section>
+
+
+<br>
+<hr>
+<section id="2">
+<h3>Step 2:</h3>
+<a href="#1">Back</a>&nbsp;<a href="#3">Forward</a><br>
+<pre>
+game_state = {
+    'wordle_words_file': wordle_words.txt, 
+    'all_words_file': english_dict.txt,
+    'max_guesses': 6, 'word_length': 5, 
+    'secret_word': shall,
+    'status': playing, 
+    'i': 0, 'j': 1, 
+    'grid': 
+         [ ['s', '', '', '', '']
+           ['', '', '', '', '']
+           ['', '', '', '', '']
+           ['', '', '', '', '']
+           ['', '', '', '', '']
+           ['', '', '', '', ''] ], 
+    'colour_grid': 
+         [ ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w'] ],
+    'popup_queue': []
+    }
+
+s				
+?	?	?	?	?
+-	-	-	-	-	
+
+
+last command entered: s
+<pre>
+</section>
+
+
+<br>
+<hr>
+<section id="3">
+<h3>Step 3:</h3>
+<a href="#2">Back</a>&nbsp;<a href="#4">Forward</a><br>
+<pre>
+game_state = {
+    'wordle_words_file': wordle_words.txt, 
+    'all_words_file': english_dict.txt,
+    'max_guesses': 6, 'word_length': 5, 
+    'secret_word': shall,
+    'status': playing, 
+    'i': 0, 'j': 2, 
+    'grid': 
+         [ ['s', 't', '', '', '']
+           ['', '', '', '', '']
+           ['', '', '', '', '']
+           ['', '', '', '', '']
+           ['', '', '', '', '']
+           ['', '', '', '', ''] ], 
+    'colour_grid': 
+         [ ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w'] ],
+    'popup_queue': []
+    }
+
+s	t			
+?	?	?	?	?
+-	-	-	-	-	
+
+
+last command entered: t
+<pre>
+</section>
+
+
+<br>
+<hr>
+<section id="4">
+<h3>Step 4:</h3>
+<a href="#3">Back</a>&nbsp;<a href="#5">Forward</a><br>
+<pre>
+game_state = {
+    'wordle_words_file': wordle_words.txt, 
+    'all_words_file': english_dict.txt,
+    'max_guesses': 6, 'word_length': 5, 
+    'secret_word': shall,
+    'status': playing, 
+    'i': 0, 'j': 3, 
+    'grid': 
+         [ ['s', 't', 'a', '', '']
+           ['', '', '', '', '']
+           ['', '', '', '', '']
+           ['', '', '', '', '']
+           ['', '', '', '', '']
+           ['', '', '', '', ''] ], 
+    'colour_grid': 
+         [ ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w'] ],
+    'popup_queue': []
+    }
+
+s	t	a		
+?	?	?	?	?
+-	-	-	-	-	
+
+
+last command entered: a
+<pre>
+</section>
+
+
+<br>
+<hr>
+<section id="5">
+<h3>Step 5:</h3>
+<a href="#4">Back</a>&nbsp;<a href="#6">Forward</a><br>
+<pre>
+game_state = {
+    'wordle_words_file': wordle_words.txt, 
+    'all_words_file': english_dict.txt,
+    'max_guesses': 6, 'word_length': 5, 
+    'secret_word': shall,
+    'status': playing, 
+    'i': 0, 'j': 4, 
+    'grid': 
+         [ ['s', 't', 'a', 'r', '']
+           ['', '', '', '', '']
+           ['', '', '', '', '']
+           ['', '', '', '', '']
+           ['', '', '', '', '']
+           ['', '', '', '', ''] ], 
+    'colour_grid': 
+         [ ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w'] ],
+    'popup_queue': []
+    }
+
+s	t	a	r	
+?	?	?	?	?
+-	-	-	-	-	
+
+
+last command entered: r
+<pre>
+</section>
+
+
+<br>
+<hr>
+<section id="6">
+<h3>Step 6:</h3>
+<a href="#5">Back</a>&nbsp;<a href="#7">Forward</a><br>
+<pre>
+game_state = {
+    'wordle_words_file': wordle_words.txt, 
+    'all_words_file': english_dict.txt,
+    'max_guesses': 6, 'word_length': 5, 
+    'secret_word': shall,
+    'status': playing, 
+    'i': 0, 'j': 5, 
+    'grid': 
+         [ ['s', 't', 'a', 'r', 'e']
+           ['', '', '', '', '']
+           ['', '', '', '', '']
+           ['', '', '', '', '']
+           ['', '', '', '', '']
+           ['', '', '', '', ''] ], 
+    'colour_grid': 
+         [ ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w'] ],
+    'popup_queue': []
+    }
+
+s	t	a	r	e
+?	?	?	?	?
+-	-	-	-	-	
+
+
+last command entered: e
+<pre>
+</section>
+
+
+<br>
+<hr>
+<section id="7">
+<h3>Step 7:</h3>
+<a href="#6">Back</a>&nbsp;<a href="#8">Forward</a><br>
+<pre>
+game_state = {
+    'wordle_words_file': wordle_words.txt, 
+    'all_words_file': english_dict.txt,
+    'max_guesses': 6, 'word_length': 5, 
+    'secret_word': shall,
+    'status': playing, 
+    'i': 1, 'j': 0, 
+    'grid': 
+         [ ['s', 't', 'a', 'r', 'e']
+           ['', '', '', '', '']
+           ['', '', '', '', '']
+           ['', '', '', '', '']
+           ['', '', '', '', '']
+           ['', '', '', '', ''] ], 
+    'colour_grid': 
+         [ ['g', '-', 'g', '-', '-']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w'] ],
+    'popup_queue': []
+    }
+
+s	t	a	r	e
+🟩	⬜	🟩	⬜	⬜
+-	-	-	-	-	
+				
+?	?	?	?	?
+-	-	-	-	-	
+
+
+last command entered: enter
+<pre>
+</section>
+
+
+<br>
+<hr>
+<section id="8">
+<h3>Step 8:</h3>
+<a href="#7">Back</a>&nbsp;<a href="#9">Forward</a><br>
+<pre>
+game_state = {
+    'wordle_words_file': wordle_words.txt, 
+    'all_words_file': english_dict.txt,
+    'max_guesses': 6, 'word_length': 5, 
+    'secret_word': shall,
+    'status': playing, 
+    'i': 1, 'j': 1, 
+    'grid': 
+         [ ['s', 't', 'a', 'r', 'e']
+           ['b', '', '', '', '']
+           ['', '', '', '', '']
+           ['', '', '', '', '']
+           ['', '', '', '', '']
+           ['', '', '', '', ''] ], 
+    'colour_grid': 
+         [ ['g', '-', 'g', '-', '-']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w'] ],
+    'popup_queue': []
+    }
+
+s	t	a	r	e
+🟩	⬜	🟩	⬜	⬜
+-	-	-	-	-	
+b				
+?	?	?	?	?
+-	-	-	-	-	
+
+
+last command entered: b
+<pre>
+</section>
+
+
+<br>
+<hr>
+<section id="9">
+<h3>Step 9:</h3>
+<a href="#8">Back</a>&nbsp;<a href="#10">Forward</a><br>
+<pre>
+game_state = {
+    'wordle_words_file': wordle_words.txt, 
+    'all_words_file': english_dict.txt,
+    'max_guesses': 6, 'word_length': 5, 
+    'secret_word': shall,
+    'status': playing, 
+    'i': 1, 'j': 2, 
+    'grid': 
+         [ ['s', 't', 'a', 'r', 'e']
+           ['b', 'o', '', '', '']
+           ['', '', '', '', '']
+           ['', '', '', '', '']
+           ['', '', '', '', '']
+           ['', '', '', '', ''] ], 
+    'colour_grid': 
+         [ ['g', '-', 'g', '-', '-']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w'] ],
+    'popup_queue': []
+    }
+
+s	t	a	r	e
+🟩	⬜	🟩	⬜	⬜
+-	-	-	-	-	
+b	o			
+?	?	?	?	?
+-	-	-	-	-	
+
+
+last command entered: o
+<pre>
+</section>
+
+
+<br>
+<hr>
+<section id="10">
+<h3>Step 10:</h3>
+<a href="#9">Back</a>&nbsp;<a href="#11">Forward</a><br>
+<pre>
+game_state = {
+    'wordle_words_file': wordle_words.txt, 
+    'all_words_file': english_dict.txt,
+    'max_guesses': 6, 'word_length': 5, 
+    'secret_word': shall,
+    'status': playing, 
+    'i': 1, 'j': 3, 
+    'grid': 
+         [ ['s', 't', 'a', 'r', 'e']
+           ['b', 'o', 'u', '', '']
+           ['', '', '', '', '']
+           ['', '', '', '', '']
+           ['', '', '', '', '']
+           ['', '', '', '', ''] ], 
+    'colour_grid': 
+         [ ['g', '-', 'g', '-', '-']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w'] ],
+    'popup_queue': []
+    }
+
+s	t	a	r	e
+🟩	⬜	🟩	⬜	⬜
+-	-	-	-	-	
+b	o	u		
+?	?	?	?	?
+-	-	-	-	-	
+
+
+last command entered: u
+<pre>
+</section>
+
+
+<br>
+<hr>
+<section id="11">
+<h3>Step 11:</h3>
+<a href="#10">Back</a>&nbsp;<a href="#12">Forward</a><br>
+<pre>
+game_state = {
+    'wordle_words_file': wordle_words.txt, 
+    'all_words_file': english_dict.txt,
+    'max_guesses': 6, 'word_length': 5, 
+    'secret_word': shall,
+    'status': playing, 
+    'i': 1, 'j': 4, 
+    'grid': 
+         [ ['s', 't', 'a', 'r', 'e']
+           ['b', 'o', 'u', 'n', '']
+           ['', '', '', '', '']
+           ['', '', '', '', '']
+           ['', '', '', '', '']
+           ['', '', '', '', ''] ], 
+    'colour_grid': 
+         [ ['g', '-', 'g', '-', '-']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w'] ],
+    'popup_queue': []
+    }
+
+s	t	a	r	e
+🟩	⬜	🟩	⬜	⬜
+-	-	-	-	-	
+b	o	u	n	
+?	?	?	?	?
+-	-	-	-	-	
+
+
+last command entered: n
+<pre>
+</section>
+
+
+<br>
+<hr>
+<section id="12">
+<h3>Step 12:</h3>
+<a href="#11">Back</a>&nbsp;<a href="#13">Forward</a><br>
+<pre>
+game_state = {
+    'wordle_words_file': wordle_words.txt, 
+    'all_words_file': english_dict.txt,
+    'max_guesses': 6, 'word_length': 5, 
+    'secret_word': shall,
+    'status': playing, 
+    'i': 1, 'j': 5, 
+    'grid': 
+         [ ['s', 't', 'a', 'r', 'e']
+           ['b', 'o', 'u', 'n', 'd']
+           ['', '', '', '', '']
+           ['', '', '', '', '']
+           ['', '', '', '', '']
+           ['', '', '', '', ''] ], 
+    'colour_grid': 
+         [ ['g', '-', 'g', '-', '-']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w'] ],
+    'popup_queue': []
+    }
+
+s	t	a	r	e
+🟩	⬜	🟩	⬜	⬜
+-	-	-	-	-	
+b	o	u	n	d
+?	?	?	?	?
+-	-	-	-	-	
+
+
+last command entered: d
+<pre>
+</section>
+
+
+<br>
+<hr>
+<section id="13">
+<h3>Step 13:</h3>
+<a href="#12">Back</a>&nbsp;<a href="#14">Forward</a><br>
+<pre>
+game_state = {
+    'wordle_words_file': wordle_words.txt, 
+    'all_words_file': english_dict.txt,
+    'max_guesses': 6, 'word_length': 5, 
+    'secret_word': shall,
+    'status': playing, 
+    'i': 2, 'j': 0, 
+    'grid': 
+         [ ['s', 't', 'a', 'r', 'e']
+           ['b', 'o', 'u', 'n', 'd']
+           ['', '', '', '', '']
+           ['', '', '', '', '']
+           ['', '', '', '', '']
+           ['', '', '', '', ''] ], 
+    'colour_grid': 
+         [ ['g', '-', 'g', '-', '-']
+           ['-', '-', '-', '-', '-']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w'] ],
+    'popup_queue': []
+    }
+
+s	t	a	r	e
+🟩	⬜	🟩	⬜	⬜
+-	-	-	-	-	
+b	o	u	n	d
+⬜	⬜	⬜	⬜	⬜
+-	-	-	-	-	
+				
+?	?	?	?	?
+-	-	-	-	-	
+
+
+last command entered: enter
+<pre>
+</section>
+
+
+<br>
+<hr>
+<section id="14">
+<h3>Step 14:</h3>
+<a href="#13">Back</a>&nbsp;<a href="#15">Forward</a><br>
+<pre>
+game_state = {
+    'wordle_words_file': wordle_words.txt, 
+    'all_words_file': english_dict.txt,
+    'max_guesses': 6, 'word_length': 5, 
+    'secret_word': shall,
+    'status': playing, 
+    'i': 2, 'j': 1, 
+    'grid': 
+         [ ['s', 't', 'a', 'r', 'e']
+           ['b', 'o', 'u', 'n', 'd']
+           ['p', '', '', '', '']
+           ['', '', '', '', '']
+           ['', '', '', '', '']
+           ['', '', '', '', ''] ], 
+    'colour_grid': 
+         [ ['g', '-', 'g', '-', '-']
+           ['-', '-', '-', '-', '-']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w'] ],
+    'popup_queue': []
+    }
+
+s	t	a	r	e
+🟩	⬜	🟩	⬜	⬜
+-	-	-	-	-	
+b	o	u	n	d
+⬜	⬜	⬜	⬜	⬜
+-	-	-	-	-	
+p				
+?	?	?	?	?
+-	-	-	-	-	
+
+
+last command entered: p
+<pre>
+</section>
+
+
+<br>
+<hr>
+<section id="15">
+<h3>Step 15:</h3>
+<a href="#14">Back</a>&nbsp;<a href="#16">Forward</a><br>
+<pre>
+game_state = {
+    'wordle_words_file': wordle_words.txt, 
+    'all_words_file': english_dict.txt,
+    'max_guesses': 6, 'word_length': 5, 
+    'secret_word': shall,
+    'status': playing, 
+    'i': 2, 'j': 2, 
+    'grid': 
+         [ ['s', 't', 'a', 'r', 'e']
+           ['b', 'o', 'u', 'n', 'd']
+           ['p', 'a', '', '', '']
+           ['', '', '', '', '']
+           ['', '', '', '', '']
+           ['', '', '', '', ''] ], 
+    'colour_grid': 
+         [ ['g', '-', 'g', '-', '-']
+           ['-', '-', '-', '-', '-']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w'] ],
+    'popup_queue': []
+    }
+
+s	t	a	r	e
+🟩	⬜	🟩	⬜	⬜
+-	-	-	-	-	
+b	o	u	n	d
+⬜	⬜	⬜	⬜	⬜
+-	-	-	-	-	
+p	a			
+?	?	?	?	?
+-	-	-	-	-	
+
+
+last command entered: a
+<pre>
+</section>
+
+
+<br>
+<hr>
+<section id="16">
+<h3>Step 16:</h3>
+<a href="#15">Back</a>&nbsp;<a href="#17">Forward</a><br>
+<pre>
+game_state = {
+    'wordle_words_file': wordle_words.txt, 
+    'all_words_file': english_dict.txt,
+    'max_guesses': 6, 'word_length': 5, 
+    'secret_word': shall,
+    'status': playing, 
+    'i': 2, 'j': 3, 
+    'grid': 
+         [ ['s', 't', 'a', 'r', 'e']
+           ['b', 'o', 'u', 'n', 'd']
+           ['p', 'a', 's', '', '']
+           ['', '', '', '', '']
+           ['', '', '', '', '']
+           ['', '', '', '', ''] ], 
+    'colour_grid': 
+         [ ['g', '-', 'g', '-', '-']
+           ['-', '-', '-', '-', '-']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w'] ],
+    'popup_queue': []
+    }
+
+s	t	a	r	e
+🟩	⬜	🟩	⬜	⬜
+-	-	-	-	-	
+b	o	u	n	d
+⬜	⬜	⬜	⬜	⬜
+-	-	-	-	-	
+p	a	s		
+?	?	?	?	?
+-	-	-	-	-	
+
+
+last command entered: s
+<pre>
+</section>
+
+
+<br>
+<hr>
+<section id="17">
+<h3>Step 17:</h3>
+<a href="#16">Back</a>&nbsp;<a href="#18">Forward</a><br>
+<pre>
+game_state = {
+    'wordle_words_file': wordle_words.txt, 
+    'all_words_file': english_dict.txt,
+    'max_guesses': 6, 'word_length': 5, 
+    'secret_word': shall,
+    'status': playing, 
+    'i': 2, 'j': 4, 
+    'grid': 
+         [ ['s', 't', 'a', 'r', 'e']
+           ['b', 'o', 'u', 'n', 'd']
+           ['p', 'a', 's', 't', '']
+           ['', '', '', '', '']
+           ['', '', '', '', '']
+           ['', '', '', '', ''] ], 
+    'colour_grid': 
+         [ ['g', '-', 'g', '-', '-']
+           ['-', '-', '-', '-', '-']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w'] ],
+    'popup_queue': []
+    }
+
+s	t	a	r	e
+🟩	⬜	🟩	⬜	⬜
+-	-	-	-	-	
+b	o	u	n	d
+⬜	⬜	⬜	⬜	⬜
+-	-	-	-	-	
+p	a	s	t	
+?	?	?	?	?
+-	-	-	-	-	
+
+
+last command entered: t
+<pre>
+</section>
+
+
+<br>
+<hr>
+<section id="18">
+<h3>Step 18:</h3>
+<a href="#17">Back</a>&nbsp;<a href="#19">Forward</a><br>
+<pre>
+game_state = {
+    'wordle_words_file': wordle_words.txt, 
+    'all_words_file': english_dict.txt,
+    'max_guesses': 6, 'word_length': 5, 
+    'secret_word': shall,
+    'status': playing, 
+    'i': 2, 'j': 5, 
+    'grid': 
+         [ ['s', 't', 'a', 'r', 'e']
+           ['b', 'o', 'u', 'n', 'd']
+           ['p', 'a', 's', 't', 'a']
+           ['', '', '', '', '']
+           ['', '', '', '', '']
+           ['', '', '', '', ''] ], 
+    'colour_grid': 
+         [ ['g', '-', 'g', '-', '-']
+           ['-', '-', '-', '-', '-']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w'] ],
+    'popup_queue': []
+    }
+
+s	t	a	r	e
+🟩	⬜	🟩	⬜	⬜
+-	-	-	-	-	
+b	o	u	n	d
+⬜	⬜	⬜	⬜	⬜
+-	-	-	-	-	
+p	a	s	t	a
+?	?	?	?	?
+-	-	-	-	-	
+
+
+last command entered: a
+<pre>
+</section>
+
+
+<br>
+<hr>
+<section id="19">
+<h3>Step 19:</h3>
+<a href="#18">Back</a>&nbsp;<a href="#20">Forward</a><br>
+<pre>
+game_state = {
+    'wordle_words_file': wordle_words.txt, 
+    'all_words_file': english_dict.txt,
+    'max_guesses': 6, 'word_length': 5, 
+    'secret_word': shall,
+    'status': playing, 
+    'i': 3, 'j': 0, 
+    'grid': 
+         [ ['s', 't', 'a', 'r', 'e']
+           ['b', 'o', 'u', 'n', 'd']
+           ['p', 'a', 's', 't', 'a']
+           ['', '', '', '', '']
+           ['', '', '', '', '']
+           ['', '', '', '', ''] ], 
+    'colour_grid': 
+         [ ['g', '-', 'g', '-', '-']
+           ['-', '-', '-', '-', '-']
+           ['-', 'y', 'y', '-', '-']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w'] ],
+    'popup_queue': []
+    }
+
+s	t	a	r	e
+🟩	⬜	🟩	⬜	⬜
+-	-	-	-	-	
+b	o	u	n	d
+⬜	⬜	⬜	⬜	⬜
+-	-	-	-	-	
+p	a	s	t	a
+⬜	🟨	🟨	⬜	⬜
+-	-	-	-	-	
+				
+?	?	?	?	?
+-	-	-	-	-	
+
+
+last command entered: enter
+<pre>
+</section>
+
+
+<br>
+<hr>
+<section id="20">
+<h3>Step 20:</h3>
+<a href="#19">Back</a>&nbsp;<a href="#21">Forward</a><br>
+<pre>
+game_state = {
+    'wordle_words_file': wordle_words.txt, 
+    'all_words_file': english_dict.txt,
+    'max_guesses': 6, 'word_length': 5, 
+    'secret_word': shall,
+    'status': playing, 
+    'i': 3, 'j': 1, 
+    'grid': 
+         [ ['s', 't', 'a', 'r', 'e']
+           ['b', 'o', 'u', 'n', 'd']
+           ['p', 'a', 's', 't', 'a']
+           ['s', '', '', '', '']
+           ['', '', '', '', '']
+           ['', '', '', '', ''] ], 
+    'colour_grid': 
+         [ ['g', '-', 'g', '-', '-']
+           ['-', '-', '-', '-', '-']
+           ['-', 'y', 'y', '-', '-']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w'] ],
+    'popup_queue': []
+    }
+
+s	t	a	r	e
+🟩	⬜	🟩	⬜	⬜
+-	-	-	-	-	
+b	o	u	n	d
+⬜	⬜	⬜	⬜	⬜
+-	-	-	-	-	
+p	a	s	t	a
+⬜	🟨	🟨	⬜	⬜
+-	-	-	-	-	
+s				
+?	?	?	?	?
+-	-	-	-	-	
+
+
+last command entered: s
+<pre>
+</section>
+
+
+<br>
+<hr>
+<section id="21">
+<h3>Step 21:</h3>
+<a href="#20">Back</a>&nbsp;<a href="#22">Forward</a><br>
+<pre>
+game_state = {
+    'wordle_words_file': wordle_words.txt, 
+    'all_words_file': english_dict.txt,
+    'max_guesses': 6, 'word_length': 5, 
+    'secret_word': shall,
+    'status': playing, 
+    'i': 3, 'j': 2, 
+    'grid': 
+         [ ['s', 't', 'a', 'r', 'e']
+           ['b', 'o', 'u', 'n', 'd']
+           ['p', 'a', 's', 't', 'a']
+           ['s', 'h', '', '', '']
+           ['', '', '', '', '']
+           ['', '', '', '', ''] ], 
+    'colour_grid': 
+         [ ['g', '-', 'g', '-', '-']
+           ['-', '-', '-', '-', '-']
+           ['-', 'y', 'y', '-', '-']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w'] ],
+    'popup_queue': []
+    }
+
+s	t	a	r	e
+🟩	⬜	🟩	⬜	⬜
+-	-	-	-	-	
+b	o	u	n	d
+⬜	⬜	⬜	⬜	⬜
+-	-	-	-	-	
+p	a	s	t	a
+⬜	🟨	🟨	⬜	⬜
+-	-	-	-	-	
+s	h			
+?	?	?	?	?
+-	-	-	-	-	
+
+
+last command entered: h
+<pre>
+</section>
+
+
+<br>
+<hr>
+<section id="22">
+<h3>Step 22:</h3>
+<a href="#21">Back</a>&nbsp;<a href="#23">Forward</a><br>
+<pre>
+game_state = {
+    'wordle_words_file': wordle_words.txt, 
+    'all_words_file': english_dict.txt,
+    'max_guesses': 6, 'word_length': 5, 
+    'secret_word': shall,
+    'status': playing, 
+    'i': 3, 'j': 3, 
+    'grid': 
+         [ ['s', 't', 'a', 'r', 'e']
+           ['b', 'o', 'u', 'n', 'd']
+           ['p', 'a', 's', 't', 'a']
+           ['s', 'h', 'a', '', '']
+           ['', '', '', '', '']
+           ['', '', '', '', ''] ], 
+    'colour_grid': 
+         [ ['g', '-', 'g', '-', '-']
+           ['-', '-', '-', '-', '-']
+           ['-', 'y', 'y', '-', '-']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w'] ],
+    'popup_queue': []
+    }
+
+s	t	a	r	e
+🟩	⬜	🟩	⬜	⬜
+-	-	-	-	-	
+b	o	u	n	d
+⬜	⬜	⬜	⬜	⬜
+-	-	-	-	-	
+p	a	s	t	a
+⬜	🟨	🟨	⬜	⬜
+-	-	-	-	-	
+s	h	a		
+?	?	?	?	?
+-	-	-	-	-	
+
+
+last command entered: a
+<pre>
+</section>
+
+
+<br>
+<hr>
+<section id="23">
+<h3>Step 23:</h3>
+<a href="#22">Back</a>&nbsp;<a href="#24">Forward</a><br>
+<pre>
+game_state = {
+    'wordle_words_file': wordle_words.txt, 
+    'all_words_file': english_dict.txt,
+    'max_guesses': 6, 'word_length': 5, 
+    'secret_word': shall,
+    'status': playing, 
+    'i': 3, 'j': 4, 
+    'grid': 
+         [ ['s', 't', 'a', 'r', 'e']
+           ['b', 'o', 'u', 'n', 'd']
+           ['p', 'a', 's', 't', 'a']
+           ['s', 'h', 'a', 'l', '']
+           ['', '', '', '', '']
+           ['', '', '', '', ''] ], 
+    'colour_grid': 
+         [ ['g', '-', 'g', '-', '-']
+           ['-', '-', '-', '-', '-']
+           ['-', 'y', 'y', '-', '-']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w'] ],
+    'popup_queue': []
+    }
+
+s	t	a	r	e
+🟩	⬜	🟩	⬜	⬜
+-	-	-	-	-	
+b	o	u	n	d
+⬜	⬜	⬜	⬜	⬜
+-	-	-	-	-	
+p	a	s	t	a
+⬜	🟨	🟨	⬜	⬜
+-	-	-	-	-	
+s	h	a	l	
+?	?	?	?	?
+-	-	-	-	-	
+
+
+last command entered: l
+<pre>
+</section>
+
+
+<br>
+<hr>
+<section id="24">
+<h3>Step 24:</h3>
+<a href="#23">Back</a>&nbsp;<a href="#25">Forward</a><br>
+<pre>
+game_state = {
+    'wordle_words_file': wordle_words.txt, 
+    'all_words_file': english_dict.txt,
+    'max_guesses': 6, 'word_length': 5, 
+    'secret_word': shall,
+    'status': playing, 
+    'i': 3, 'j': 5, 
+    'grid': 
+         [ ['s', 't', 'a', 'r', 'e']
+           ['b', 'o', 'u', 'n', 'd']
+           ['p', 'a', 's', 't', 'a']
+           ['s', 'h', 'a', 'l', 'l']
+           ['', '', '', '', '']
+           ['', '', '', '', ''] ], 
+    'colour_grid': 
+         [ ['g', '-', 'g', '-', '-']
+           ['-', '-', '-', '-', '-']
+           ['-', 'y', 'y', '-', '-']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w'] ],
+    'popup_queue': []
+    }
+
+s	t	a	r	e
+🟩	⬜	🟩	⬜	⬜
+-	-	-	-	-	
+b	o	u	n	d
+⬜	⬜	⬜	⬜	⬜
+-	-	-	-	-	
+p	a	s	t	a
+⬜	🟨	🟨	⬜	⬜
+-	-	-	-	-	
+s	h	a	l	l
+?	?	?	?	?
+-	-	-	-	-	
+
+
+last command entered: l
+<pre>
+</section>
+
+
+<br>
+<hr>
+<section id="25">
+<h3>Step 25:</h3>
+<a href="#24">Back</a>&nbsp;<a href="#26">Forward</a><br>
+<pre>
+game_state = {
+    'wordle_words_file': wordle_words.txt, 
+    'all_words_file': english_dict.txt,
+    'max_guesses': 6, 'word_length': 5, 
+    'secret_word': shall,
+    'status': won, 
+    'i': 4, 'j': 0, 
+    'grid': 
+         [ ['s', 't', 'a', 'r', 'e']
+           ['b', 'o', 'u', 'n', 'd']
+           ['p', 'a', 's', 't', 'a']
+           ['s', 'h', 'a', 'l', 'l']
+           ['', '', '', '', '']
+           ['', '', '', '', ''] ], 
+    'colour_grid': 
+         [ ['g', '-', 'g', '-', '-']
+           ['-', '-', '-', '-', '-']
+           ['-', 'y', 'y', '-', '-']
+           ['g', 'g', 'g', 'g', 'g']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w'] ],
+    'popup_queue': []
+    }
+
+s	t	a	r	e
+🟩	⬜	🟩	⬜	⬜
+b	o	u	n	d
+⬜	⬜	⬜	⬜	⬜
+p	a	s	t	a
+⬜	🟨	🟨	⬜	⬜
+s	h	a	l	l
+🟩	🟩	🟩	🟩	🟩
+
+
+last command entered: +
+<pre>
+</section>
+
+
+<br>
+<hr>
+<section id="26">
+<h3>Step 26:</h3>
+<a href="#25">Back</a>&nbsp;<a href="#27">Forward</a><br>
+<pre>
+game_state = {
+    'wordle_words_file': wordle_words.txt, 
+    'all_words_file': english_dict.txt,
+    'max_guesses': 6, 'word_length': 5, 
+    'secret_word': shall,
+    'status': won, 
+    'i': 4, 'j': 0, 
+    'grid': 
+         [ ['s', 't', 'a', 'r', 'e']
+           ['b', 'o', 'u', 'n', 'd']
+           ['p', 'a', 's', 't', 'a']
+           ['s', 'h', 'a', 'l', 'l']
+           ['', '', '', '', '']
+           ['', '', '', '', ''] ], 
+    'colour_grid': 
+         [ ['g', '-', 'g', '-', '-']
+           ['-', '-', '-', '-', '-']
+           ['-', 'y', 'y', '-', '-']
+           ['g', 'g', 'g', 'g', 'g']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w'] ],
+    'popup_queue': [('You won!!!!', 'text')]
+    }
+
+You won!!!!
+s	t	a	r	e
+🟩	⬜	🟩	⬜	⬜
+b	o	u	n	d
+⬜	⬜	⬜	⬜	⬜
+p	a	s	t	a
+⬜	🟨	🟨	⬜	⬜
+s	h	a	l	l
+🟩	🟩	🟩	🟩	🟩
+
+
+last command entered: +
+<pre>
+</section>
+
+
+<br>
+<hr>
+<section id="27">
+<h3>Step 27:</h3>
+<a href="#26">Back</a>&nbsp;<a href="#28">Forward</a><br>
+<pre>
+game_state = {
+    'wordle_words_file': wordle_words.txt, 
+    'all_words_file': english_dict.txt,
+    'max_guesses': 6, 'word_length': 5, 
+    'secret_word': print,
+    'status': playing, 
+    'i': 0, 'j': 0, 
+    'grid': 
+         [ ['', '', '', '', '']
+           ['', '', '', '', '']
+           ['', '', '', '', '']
+           ['', '', '', '', '']
+           ['', '', '', '', '']
+           ['', '', '', '', ''] ], 
+    'colour_grid': 
+         [ ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w'] ],
+    'popup_queue': []
+    }
+
+				
+?	?	?	?	?
+-	-	-	-	-	
+
+
+last command entered: +
+<pre>
+</section>
+
+
+<br>
+<hr>
+<section id="28">
+<h3>Step 28:</h3>
+<a href="#27">Back</a>&nbsp;<a href="#29">Forward</a><br>
+<pre>
+game_state = {
+    'wordle_words_file': wordle_words.txt, 
+    'all_words_file': english_dict.txt,
+    'max_guesses': 6, 'word_length': 5, 
+    'secret_word': print,
+    'status': playing, 
+    'i': 0, 'j': 1, 
+    'grid': 
+         [ ['s', '', '', '', '']
+           ['', '', '', '', '']
+           ['', '', '', '', '']
+           ['', '', '', '', '']
+           ['', '', '', '', '']
+           ['', '', '', '', ''] ], 
+    'colour_grid': 
+         [ ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w'] ],
+    'popup_queue': []
+    }
+
+s				
+?	?	?	?	?
+-	-	-	-	-	
+
+
+last command entered: s
+<pre>
+</section>
+
+
+<br>
+<hr>
+<section id="29">
+<h3>Step 29:</h3>
+<a href="#28">Back</a>&nbsp;<a href="#30">Forward</a><br>
+<pre>
+game_state = {
+    'wordle_words_file': wordle_words.txt, 
+    'all_words_file': english_dict.txt,
+    'max_guesses': 6, 'word_length': 5, 
+    'secret_word': print,
+    'status': playing, 
+    'i': 0, 'j': 2, 
+    'grid': 
+         [ ['s', 's', '', '', '']
+           ['', '', '', '', '']
+           ['', '', '', '', '']
+           ['', '', '', '', '']
+           ['', '', '', '', '']
+           ['', '', '', '', ''] ], 
+    'colour_grid': 
+         [ ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w'] ],
+    'popup_queue': []
+    }
+
+s	s			
+?	?	?	?	?
+-	-	-	-	-	
+
+
+last command entered: s
+<pre>
+</section>
+
+
+<br>
+<hr>
+<section id="30">
+<h3>Step 30:</h3>
+<a href="#29">Back</a>&nbsp;<a href="#31">Forward</a><br>
+<pre>
+game_state = {
+    'wordle_words_file': wordle_words.txt, 
+    'all_words_file': english_dict.txt,
+    'max_guesses': 6, 'word_length': 5, 
+    'secret_word': print,
+    'status': playing, 
+    'i': 0, 'j': 3, 
+    'grid': 
+         [ ['s', 's', 's', '', '']
+           ['', '', '', '', '']
+           ['', '', '', '', '']
+           ['', '', '', '', '']
+           ['', '', '', '', '']
+           ['', '', '', '', ''] ], 
+    'colour_grid': 
+         [ ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w'] ],
+    'popup_queue': []
+    }
+
+s	s	s		
+?	?	?	?	?
+-	-	-	-	-	
+
+
+last command entered: s
+<pre>
+</section>
+
+
+<br>
+<hr>
+<section id="31">
+<h3>Step 31:</h3>
+<a href="#30">Back</a>&nbsp;<a href="#32">Forward</a><br>
+<pre>
+game_state = {
+    'wordle_words_file': wordle_words.txt, 
+    'all_words_file': english_dict.txt,
+    'max_guesses': 6, 'word_length': 5, 
+    'secret_word': print,
+    'status': playing, 
+    'i': 0, 'j': 4, 
+    'grid': 
+         [ ['s', 's', 's', 's', '']
+           ['', '', '', '', '']
+           ['', '', '', '', '']
+           ['', '', '', '', '']
+           ['', '', '', '', '']
+           ['', '', '', '', ''] ], 
+    'colour_grid': 
+         [ ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w'] ],
+    'popup_queue': []
+    }
+
+s	s	s	s	
+?	?	?	?	?
+-	-	-	-	-	
+
+
+last command entered: s
+<pre>
+</section>
+
+
+<br>
+<hr>
+<section id="32">
+<h3>Step 32:</h3>
+<a href="#31">Back</a>&nbsp;<a href="#33">Forward</a><br>
+<pre>
+game_state = {
+    'wordle_words_file': wordle_words.txt, 
+    'all_words_file': english_dict.txt,
+    'max_guesses': 6, 'word_length': 5, 
+    'secret_word': print,
+    'status': playing, 
+    'i': 0, 'j': 5, 
+    'grid': 
+         [ ['s', 's', 's', 's', 's']
+           ['', '', '', '', '']
+           ['', '', '', '', '']
+           ['', '', '', '', '']
+           ['', '', '', '', '']
+           ['', '', '', '', ''] ], 
+    'colour_grid': 
+         [ ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w'] ],
+    'popup_queue': []
+    }
+
+s	s	s	s	s
+?	?	?	?	?
+-	-	-	-	-	
+
+
+last command entered: s
+<pre>
+</section>
+
+
+<br>
+<hr>
+<section id="33">
+<h3>Step 33:</h3>
+<a href="#32">Back</a>&nbsp;<a href="#34">Forward</a><br>
+<pre>
+game_state = {
+    'wordle_words_file': wordle_words.txt, 
+    'all_words_file': english_dict.txt,
+    'max_guesses': 6, 'word_length': 5, 
+    'secret_word': print,
+    'status': playing, 
+    'i': 0, 'j': 0, 
+    'grid': 
+         [ ['', '', '', '', '']
+           ['', '', '', '', '']
+           ['', '', '', '', '']
+           ['', '', '', '', '']
+           ['', '', '', '', '']
+           ['', '', '', '', ''] ], 
+    'colour_grid': 
+         [ ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w'] ],
+    'popup_queue': []
+    }
+
+				
+?	?	?	?	?
+-	-	-	-	-	
+
+
+last command entered: _
+<pre>
+</section>
+
+
+<br>
+<hr>
+<section id="34">
+<h3>Step 34:</h3>
+<a href="#33">Back</a>&nbsp;<a href="#35">Forward</a><br>
+<pre>
+game_state = {
+    'wordle_words_file': wordle_words.txt, 
+    'all_words_file': english_dict.txt,
+    'max_guesses': 6, 'word_length': 5, 
+    'secret_word': print,
+    'status': playing, 
+    'i': 0, 'j': 1, 
+    'grid': 
+         [ ['s', '', '', '', '']
+           ['', '', '', '', '']
+           ['', '', '', '', '']
+           ['', '', '', '', '']
+           ['', '', '', '', '']
+           ['', '', '', '', ''] ], 
+    'colour_grid': 
+         [ ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w'] ],
+    'popup_queue': []
+    }
+
+s				
+?	?	?	?	?
+-	-	-	-	-	
+
+
+last command entered: s
+<pre>
+</section>
+
+
+<br>
+<hr>
+<section id="35">
+<h3>Step 35:</h3>
+<a href="#34">Back</a>&nbsp;<a href="#36">Forward</a><br>
+<pre>
+game_state = {
+    'wordle_words_file': wordle_words.txt, 
+    'all_words_file': english_dict.txt,
+    'max_guesses': 6, 'word_length': 5, 
+    'secret_word': print,
+    'status': playing, 
+    'i': 0, 'j': 2, 
+    'grid': 
+         [ ['s', 'h', '', '', '']
+           ['', '', '', '', '']
+           ['', '', '', '', '']
+           ['', '', '', '', '']
+           ['', '', '', '', '']
+           ['', '', '', '', ''] ], 
+    'colour_grid': 
+         [ ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w'] ],
+    'popup_queue': []
+    }
+
+s	h			
+?	?	?	?	?
+-	-	-	-	-	
+
+
+last command entered: h
+<pre>
+</section>
+
+
+<br>
+<hr>
+<section id="36">
+<h3>Step 36:</h3>
+<a href="#35">Back</a>&nbsp;<a href="#37">Forward</a><br>
+<pre>
+game_state = {
+    'wordle_words_file': wordle_words.txt, 
+    'all_words_file': english_dict.txt,
+    'max_guesses': 6, 'word_length': 5, 
+    'secret_word': print,
+    'status': playing, 
+    'i': 0, 'j': 3, 
+    'grid': 
+         [ ['s', 'h', 'a', '', '']
+           ['', '', '', '', '']
+           ['', '', '', '', '']
+           ['', '', '', '', '']
+           ['', '', '', '', '']
+           ['', '', '', '', ''] ], 
+    'colour_grid': 
+         [ ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w'] ],
+    'popup_queue': []
+    }
+
+s	h	a		
+?	?	?	?	?
+-	-	-	-	-	
+
+
+last command entered: a
+<pre>
+</section>
+
+
+<br>
+<hr>
+<section id="37">
+<h3>Step 37:</h3>
+<a href="#36">Back</a>&nbsp;<a href="#38">Forward</a><br>
+<pre>
+game_state = {
+    'wordle_words_file': wordle_words.txt, 
+    'all_words_file': english_dict.txt,
+    'max_guesses': 6, 'word_length': 5, 
+    'secret_word': print,
+    'status': playing, 
+    'i': 0, 'j': 4, 
+    'grid': 
+         [ ['s', 'h', 'a', 'r', '']
+           ['', '', '', '', '']
+           ['', '', '', '', '']
+           ['', '', '', '', '']
+           ['', '', '', '', '']
+           ['', '', '', '', ''] ], 
+    'colour_grid': 
+         [ ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w'] ],
+    'popup_queue': []
+    }
+
+s	h	a	r	
+?	?	?	?	?
+-	-	-	-	-	
+
+
+last command entered: r
+<pre>
+</section>
+
+
+<br>
+<hr>
+<section id="38">
+<h3>Step 38:</h3>
+<a href="#37">Back</a>&nbsp;<a href="#39">Forward</a><br>
+<pre>
+game_state = {
+    'wordle_words_file': wordle_words.txt, 
+    'all_words_file': english_dict.txt,
+    'max_guesses': 6, 'word_length': 5, 
+    'secret_word': print,
+    'status': playing, 
+    'i': 0, 'j': 5, 
+    'grid': 
+         [ ['s', 'h', 'a', 'r', 'e']
+           ['', '', '', '', '']
+           ['', '', '', '', '']
+           ['', '', '', '', '']
+           ['', '', '', '', '']
+           ['', '', '', '', ''] ], 
+    'colour_grid': 
+         [ ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w'] ],
+    'popup_queue': []
+    }
+
+s	h	a	r	e
+?	?	?	?	?
+-	-	-	-	-	
+
+
+last command entered: e
+<pre>
+</section>
+
+
+<br>
+<hr>
+<section id="39">
+<h3>Step 39:</h3>
+<a href="#38">Back</a>&nbsp;<a href="#40">Forward</a><br>
+<pre>
+game_state = {
+    'wordle_words_file': wordle_words.txt, 
+    'all_words_file': english_dict.txt,
+    'max_guesses': 6, 'word_length': 5, 
+    'secret_word': print,
+    'status': playing, 
+    'i': 1, 'j': 0, 
+    'grid': 
+         [ ['s', 'h', 'a', 'r', 'e']
+           ['', '', '', '', '']
+           ['', '', '', '', '']
+           ['', '', '', '', '']
+           ['', '', '', '', '']
+           ['', '', '', '', ''] ], 
+    'colour_grid': 
+         [ ['-', '-', '-', 'y', '-']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w'] ],
+    'popup_queue': []
+    }
+
+s	h	a	r	e
+⬜	⬜	⬜	🟨	⬜
+-	-	-	-	-	
+				
+?	?	?	?	?
+-	-	-	-	-	
+
+
+last command entered: enter
+<pre>
+</section>
+
+
+<br>
+<hr>
+<section id="40">
+<h3>Step 40:</h3>
+<a href="#39">Back</a>&nbsp;<a href="#41">Forward</a><br>
+<pre>
+game_state = {
+    'wordle_words_file': wordle_words.txt, 
+    'all_words_file': english_dict.txt,
+    'max_guesses': 6, 'word_length': 5, 
+    'secret_word': print,
+    'status': playing, 
+    'i': 1, 'j': 1, 
+    'grid': 
+         [ ['s', 'h', 'a', 'r', 'e']
+           ['s', '', '', '', '']
+           ['', '', '', '', '']
+           ['', '', '', '', '']
+           ['', '', '', '', '']
+           ['', '', '', '', ''] ], 
+    'colour_grid': 
+         [ ['-', '-', '-', 'y', '-']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w'] ],
+    'popup_queue': []
+    }
+
+s	h	a	r	e
+⬜	⬜	⬜	🟨	⬜
+-	-	-	-	-	
+s				
+?	?	?	?	?
+-	-	-	-	-	
+
+
+last command entered: s
+<pre>
+</section>
+
+
+<br>
+<hr>
+<section id="41">
+<h3>Step 41:</h3>
+<a href="#40">Back</a>&nbsp;<a href="#42">Forward</a><br>
+<pre>
+game_state = {
+    'wordle_words_file': wordle_words.txt, 
+    'all_words_file': english_dict.txt,
+    'max_guesses': 6, 'word_length': 5, 
+    'secret_word': print,
+    'status': playing, 
+    'i': 1, 'j': 2, 
+    'grid': 
+         [ ['s', 'h', 'a', 'r', 'e']
+           ['s', 'h', '', '', '']
+           ['', '', '', '', '']
+           ['', '', '', '', '']
+           ['', '', '', '', '']
+           ['', '', '', '', ''] ], 
+    'colour_grid': 
+         [ ['-', '-', '-', 'y', '-']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w'] ],
+    'popup_queue': []
+    }
+
+s	h	a	r	e
+⬜	⬜	⬜	🟨	⬜
+-	-	-	-	-	
+s	h			
+?	?	?	?	?
+-	-	-	-	-	
+
+
+last command entered: h
+<pre>
+</section>
+
+
+<br>
+<hr>
+<section id="42">
+<h3>Step 42:</h3>
+<a href="#41">Back</a>&nbsp;<a href="#43">Forward</a><br>
+<pre>
+game_state = {
+    'wordle_words_file': wordle_words.txt, 
+    'all_words_file': english_dict.txt,
+    'max_guesses': 6, 'word_length': 5, 
+    'secret_word': print,
+    'status': playing, 
+    'i': 1, 'j': 3, 
+    'grid': 
+         [ ['s', 'h', 'a', 'r', 'e']
+           ['s', 'h', 'a', '', '']
+           ['', '', '', '', '']
+           ['', '', '', '', '']
+           ['', '', '', '', '']
+           ['', '', '', '', ''] ], 
+    'colour_grid': 
+         [ ['-', '-', '-', 'y', '-']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w'] ],
+    'popup_queue': []
+    }
+
+s	h	a	r	e
+⬜	⬜	⬜	🟨	⬜
+-	-	-	-	-	
+s	h	a		
+?	?	?	?	?
+-	-	-	-	-	
+
+
+last command entered: a
+<pre>
+</section>
+
+
+<br>
+<hr>
+<section id="43">
+<h3>Step 43:</h3>
+<a href="#42">Back</a>&nbsp;<a href="#44">Forward</a><br>
+<pre>
+game_state = {
+    'wordle_words_file': wordle_words.txt, 
+    'all_words_file': english_dict.txt,
+    'max_guesses': 6, 'word_length': 5, 
+    'secret_word': print,
+    'status': playing, 
+    'i': 1, 'j': 4, 
+    'grid': 
+         [ ['s', 'h', 'a', 'r', 'e']
+           ['s', 'h', 'a', 'r', '']
+           ['', '', '', '', '']
+           ['', '', '', '', '']
+           ['', '', '', '', '']
+           ['', '', '', '', ''] ], 
+    'colour_grid': 
+         [ ['-', '-', '-', 'y', '-']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w'] ],
+    'popup_queue': []
+    }
+
+s	h	a	r	e
+⬜	⬜	⬜	🟨	⬜
+-	-	-	-	-	
+s	h	a	r	
+?	?	?	?	?
+-	-	-	-	-	
+
+
+last command entered: r
+<pre>
+</section>
+
+
+<br>
+<hr>
+<section id="44">
+<h3>Step 44:</h3>
+<a href="#43">Back</a>&nbsp;<a href="#45">Forward</a><br>
+<pre>
+game_state = {
+    'wordle_words_file': wordle_words.txt, 
+    'all_words_file': english_dict.txt,
+    'max_guesses': 6, 'word_length': 5, 
+    'secret_word': print,
+    'status': playing, 
+    'i': 1, 'j': 5, 
+    'grid': 
+         [ ['s', 'h', 'a', 'r', 'e']
+           ['s', 'h', 'a', 'r', 'e']
+           ['', '', '', '', '']
+           ['', '', '', '', '']
+           ['', '', '', '', '']
+           ['', '', '', '', ''] ], 
+    'colour_grid': 
+         [ ['-', '-', '-', 'y', '-']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w'] ],
+    'popup_queue': []
+    }
+
+s	h	a	r	e
+⬜	⬜	⬜	🟨	⬜
+-	-	-	-	-	
+s	h	a	r	e
+?	?	?	?	?
+-	-	-	-	-	
+
+
+last command entered: e
+<pre>
+</section>
+
+
+<br>
+<hr>
+<section id="45">
+<h3>Step 45:</h3>
+<a href="#44">Back</a>&nbsp;<a href="#46">Forward</a><br>
+<pre>
+game_state = {
+    'wordle_words_file': wordle_words.txt, 
+    'all_words_file': english_dict.txt,
+    'max_guesses': 6, 'word_length': 5, 
+    'secret_word': print,
+    'status': playing, 
+    'i': 2, 'j': 0, 
+    'grid': 
+         [ ['s', 'h', 'a', 'r', 'e']
+           ['s', 'h', 'a', 'r', 'e']
+           ['', '', '', '', '']
+           ['', '', '', '', '']
+           ['', '', '', '', '']
+           ['', '', '', '', ''] ], 
+    'colour_grid': 
+         [ ['-', '-', '-', 'y', '-']
+           ['-', '-', '-', 'y', '-']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w'] ],
+    'popup_queue': []
+    }
+
+s	h	a	r	e
+⬜	⬜	⬜	🟨	⬜
+-	-	-	-	-	
+s	h	a	r	e
+⬜	⬜	⬜	🟨	⬜
+-	-	-	-	-	
+				
+?	?	?	?	?
+-	-	-	-	-	
+
+
+last command entered: enter
+<pre>
+</section>
+
+
+<br>
+<hr>
+<section id="46">
+<h3>Step 46:</h3>
+<a href="#45">Back</a>&nbsp;<a href="#47">Forward</a><br>
+<pre>
+game_state = {
+    'wordle_words_file': wordle_words.txt, 
+    'all_words_file': english_dict.txt,
+    'max_guesses': 6, 'word_length': 5, 
+    'secret_word': print,
+    'status': playing, 
+    'i': 2, 'j': 1, 
+    'grid': 
+         [ ['s', 'h', 'a', 'r', 'e']
+           ['s', 'h', 'a', 'r', 'e']
+           ['s', '', '', '', '']
+           ['', '', '', '', '']
+           ['', '', '', '', '']
+           ['', '', '', '', ''] ], 
+    'colour_grid': 
+         [ ['-', '-', '-', 'y', '-']
+           ['-', '-', '-', 'y', '-']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w'] ],
+    'popup_queue': []
+    }
+
+s	h	a	r	e
+⬜	⬜	⬜	🟨	⬜
+-	-	-	-	-	
+s	h	a	r	e
+⬜	⬜	⬜	🟨	⬜
+-	-	-	-	-	
+s				
+?	?	?	?	?
+-	-	-	-	-	
+
+
+last command entered: s
+<pre>
+</section>
+
+
+<br>
+<hr>
+<section id="47">
+<h3>Step 47:</h3>
+<a href="#46">Back</a>&nbsp;<a href="#48">Forward</a><br>
+<pre>
+game_state = {
+    'wordle_words_file': wordle_words.txt, 
+    'all_words_file': english_dict.txt,
+    'max_guesses': 6, 'word_length': 5, 
+    'secret_word': print,
+    'status': playing, 
+    'i': 2, 'j': 2, 
+    'grid': 
+         [ ['s', 'h', 'a', 'r', 'e']
+           ['s', 'h', 'a', 'r', 'e']
+           ['s', 'h', '', '', '']
+           ['', '', '', '', '']
+           ['', '', '', '', '']
+           ['', '', '', '', ''] ], 
+    'colour_grid': 
+         [ ['-', '-', '-', 'y', '-']
+           ['-', '-', '-', 'y', '-']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w'] ],
+    'popup_queue': []
+    }
+
+s	h	a	r	e
+⬜	⬜	⬜	🟨	⬜
+-	-	-	-	-	
+s	h	a	r	e
+⬜	⬜	⬜	🟨	⬜
+-	-	-	-	-	
+s	h			
+?	?	?	?	?
+-	-	-	-	-	
+
+
+last command entered: h
+<pre>
+</section>
+
+
+<br>
+<hr>
+<section id="48">
+<h3>Step 48:</h3>
+<a href="#47">Back</a>&nbsp;<a href="#49">Forward</a><br>
+<pre>
+game_state = {
+    'wordle_words_file': wordle_words.txt, 
+    'all_words_file': english_dict.txt,
+    'max_guesses': 6, 'word_length': 5, 
+    'secret_word': print,
+    'status': playing, 
+    'i': 2, 'j': 3, 
+    'grid': 
+         [ ['s', 'h', 'a', 'r', 'e']
+           ['s', 'h', 'a', 'r', 'e']
+           ['s', 'h', 'a', '', '']
+           ['', '', '', '', '']
+           ['', '', '', '', '']
+           ['', '', '', '', ''] ], 
+    'colour_grid': 
+         [ ['-', '-', '-', 'y', '-']
+           ['-', '-', '-', 'y', '-']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w'] ],
+    'popup_queue': []
+    }
+
+s	h	a	r	e
+⬜	⬜	⬜	🟨	⬜
+-	-	-	-	-	
+s	h	a	r	e
+⬜	⬜	⬜	🟨	⬜
+-	-	-	-	-	
+s	h	a		
+?	?	?	?	?
+-	-	-	-	-	
+
+
+last command entered: a
+<pre>
+</section>
+
+
+<br>
+<hr>
+<section id="49">
+<h3>Step 49:</h3>
+<a href="#48">Back</a>&nbsp;<a href="#50">Forward</a><br>
+<pre>
+game_state = {
+    'wordle_words_file': wordle_words.txt, 
+    'all_words_file': english_dict.txt,
+    'max_guesses': 6, 'word_length': 5, 
+    'secret_word': print,
+    'status': playing, 
+    'i': 2, 'j': 4, 
+    'grid': 
+         [ ['s', 'h', 'a', 'r', 'e']
+           ['s', 'h', 'a', 'r', 'e']
+           ['s', 'h', 'a', 'r', '']
+           ['', '', '', '', '']
+           ['', '', '', '', '']
+           ['', '', '', '', ''] ], 
+    'colour_grid': 
+         [ ['-', '-', '-', 'y', '-']
+           ['-', '-', '-', 'y', '-']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w'] ],
+    'popup_queue': []
+    }
+
+s	h	a	r	e
+⬜	⬜	⬜	🟨	⬜
+-	-	-	-	-	
+s	h	a	r	e
+⬜	⬜	⬜	🟨	⬜
+-	-	-	-	-	
+s	h	a	r	
+?	?	?	?	?
+-	-	-	-	-	
+
+
+last command entered: r
+<pre>
+</section>
+
+
+<br>
+<hr>
+<section id="50">
+<h3>Step 50:</h3>
+<a href="#49">Back</a>&nbsp;<a href="#51">Forward</a><br>
+<pre>
+game_state = {
+    'wordle_words_file': wordle_words.txt, 
+    'all_words_file': english_dict.txt,
+    'max_guesses': 6, 'word_length': 5, 
+    'secret_word': print,
+    'status': playing, 
+    'i': 2, 'j': 5, 
+    'grid': 
+         [ ['s', 'h', 'a', 'r', 'e']
+           ['s', 'h', 'a', 'r', 'e']
+           ['s', 'h', 'a', 'r', 'e']
+           ['', '', '', '', '']
+           ['', '', '', '', '']
+           ['', '', '', '', ''] ], 
+    'colour_grid': 
+         [ ['-', '-', '-', 'y', '-']
+           ['-', '-', '-', 'y', '-']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w'] ],
+    'popup_queue': []
+    }
+
+s	h	a	r	e
+⬜	⬜	⬜	🟨	⬜
+-	-	-	-	-	
+s	h	a	r	e
+⬜	⬜	⬜	🟨	⬜
+-	-	-	-	-	
+s	h	a	r	e
+?	?	?	?	?
+-	-	-	-	-	
+
+
+last command entered: e
+<pre>
+</section>
+
+
+<br>
+<hr>
+<section id="51">
+<h3>Step 51:</h3>
+<a href="#50">Back</a>&nbsp;<a href="#52">Forward</a><br>
+<pre>
+game_state = {
+    'wordle_words_file': wordle_words.txt, 
+    'all_words_file': english_dict.txt,
+    'max_guesses': 6, 'word_length': 5, 
+    'secret_word': print,
+    'status': playing, 
+    'i': 3, 'j': 0, 
+    'grid': 
+         [ ['s', 'h', 'a', 'r', 'e']
+           ['s', 'h', 'a', 'r', 'e']
+           ['s', 'h', 'a', 'r', 'e']
+           ['', '', '', '', '']
+           ['', '', '', '', '']
+           ['', '', '', '', ''] ], 
+    'colour_grid': 
+         [ ['-', '-', '-', 'y', '-']
+           ['-', '-', '-', 'y', '-']
+           ['-', '-', '-', 'y', '-']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w'] ],
+    'popup_queue': []
+    }
+
+s	h	a	r	e
+⬜	⬜	⬜	🟨	⬜
+-	-	-	-	-	
+s	h	a	r	e
+⬜	⬜	⬜	🟨	⬜
+-	-	-	-	-	
+s	h	a	r	e
+⬜	⬜	⬜	🟨	⬜
+-	-	-	-	-	
+				
+?	?	?	?	?
+-	-	-	-	-	
+
+
+last command entered: enter
+<pre>
+</section>
+
+
+<br>
+<hr>
+<section id="52">
+<h3>Step 52:</h3>
+<a href="#51">Back</a>&nbsp;<a href="#53">Forward</a><br>
+<pre>
+game_state = {
+    'wordle_words_file': wordle_words.txt, 
+    'all_words_file': english_dict.txt,
+    'max_guesses': 6, 'word_length': 5, 
+    'secret_word': print,
+    'status': playing, 
+    'i': 3, 'j': 1, 
+    'grid': 
+         [ ['s', 'h', 'a', 'r', 'e']
+           ['s', 'h', 'a', 'r', 'e']
+           ['s', 'h', 'a', 'r', 'e']
+           ['s', '', '', '', '']
+           ['', '', '', '', '']
+           ['', '', '', '', ''] ], 
+    'colour_grid': 
+         [ ['-', '-', '-', 'y', '-']
+           ['-', '-', '-', 'y', '-']
+           ['-', '-', '-', 'y', '-']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w'] ],
+    'popup_queue': []
+    }
+
+s	h	a	r	e
+⬜	⬜	⬜	🟨	⬜
+-	-	-	-	-	
+s	h	a	r	e
+⬜	⬜	⬜	🟨	⬜
+-	-	-	-	-	
+s	h	a	r	e
+⬜	⬜	⬜	🟨	⬜
+-	-	-	-	-	
+s				
+?	?	?	?	?
+-	-	-	-	-	
+
+
+last command entered: s
+<pre>
+</section>
+
+
+<br>
+<hr>
+<section id="53">
+<h3>Step 53:</h3>
+<a href="#52">Back</a>&nbsp;<a href="#54">Forward</a><br>
+<pre>
+game_state = {
+    'wordle_words_file': wordle_words.txt, 
+    'all_words_file': english_dict.txt,
+    'max_guesses': 6, 'word_length': 5, 
+    'secret_word': print,
+    'status': playing, 
+    'i': 3, 'j': 2, 
+    'grid': 
+         [ ['s', 'h', 'a', 'r', 'e']
+           ['s', 'h', 'a', 'r', 'e']
+           ['s', 'h', 'a', 'r', 'e']
+           ['s', 'h', '', '', '']
+           ['', '', '', '', '']
+           ['', '', '', '', ''] ], 
+    'colour_grid': 
+         [ ['-', '-', '-', 'y', '-']
+           ['-', '-', '-', 'y', '-']
+           ['-', '-', '-', 'y', '-']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w'] ],
+    'popup_queue': []
+    }
+
+s	h	a	r	e
+⬜	⬜	⬜	🟨	⬜
+-	-	-	-	-	
+s	h	a	r	e
+⬜	⬜	⬜	🟨	⬜
+-	-	-	-	-	
+s	h	a	r	e
+⬜	⬜	⬜	🟨	⬜
+-	-	-	-	-	
+s	h			
+?	?	?	?	?
+-	-	-	-	-	
+
+
+last command entered: h
+<pre>
+</section>
+
+
+<br>
+<hr>
+<section id="54">
+<h3>Step 54:</h3>
+<a href="#53">Back</a>&nbsp;<a href="#55">Forward</a><br>
+<pre>
+game_state = {
+    'wordle_words_file': wordle_words.txt, 
+    'all_words_file': english_dict.txt,
+    'max_guesses': 6, 'word_length': 5, 
+    'secret_word': print,
+    'status': playing, 
+    'i': 3, 'j': 3, 
+    'grid': 
+         [ ['s', 'h', 'a', 'r', 'e']
+           ['s', 'h', 'a', 'r', 'e']
+           ['s', 'h', 'a', 'r', 'e']
+           ['s', 'h', 'a', '', '']
+           ['', '', '', '', '']
+           ['', '', '', '', ''] ], 
+    'colour_grid': 
+         [ ['-', '-', '-', 'y', '-']
+           ['-', '-', '-', 'y', '-']
+           ['-', '-', '-', 'y', '-']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w'] ],
+    'popup_queue': []
+    }
+
+s	h	a	r	e
+⬜	⬜	⬜	🟨	⬜
+-	-	-	-	-	
+s	h	a	r	e
+⬜	⬜	⬜	🟨	⬜
+-	-	-	-	-	
+s	h	a	r	e
+⬜	⬜	⬜	🟨	⬜
+-	-	-	-	-	
+s	h	a		
+?	?	?	?	?
+-	-	-	-	-	
+
+
+last command entered: a
+<pre>
+</section>
+
+
+<br>
+<hr>
+<section id="55">
+<h3>Step 55:</h3>
+<a href="#54">Back</a>&nbsp;<a href="#56">Forward</a><br>
+<pre>
+game_state = {
+    'wordle_words_file': wordle_words.txt, 
+    'all_words_file': english_dict.txt,
+    'max_guesses': 6, 'word_length': 5, 
+    'secret_word': print,
+    'status': playing, 
+    'i': 3, 'j': 4, 
+    'grid': 
+         [ ['s', 'h', 'a', 'r', 'e']
+           ['s', 'h', 'a', 'r', 'e']
+           ['s', 'h', 'a', 'r', 'e']
+           ['s', 'h', 'a', 'r', '']
+           ['', '', '', '', '']
+           ['', '', '', '', ''] ], 
+    'colour_grid': 
+         [ ['-', '-', '-', 'y', '-']
+           ['-', '-', '-', 'y', '-']
+           ['-', '-', '-', 'y', '-']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w'] ],
+    'popup_queue': []
+    }
+
+s	h	a	r	e
+⬜	⬜	⬜	🟨	⬜
+-	-	-	-	-	
+s	h	a	r	e
+⬜	⬜	⬜	🟨	⬜
+-	-	-	-	-	
+s	h	a	r	e
+⬜	⬜	⬜	🟨	⬜
+-	-	-	-	-	
+s	h	a	r	
+?	?	?	?	?
+-	-	-	-	-	
+
+
+last command entered: r
+<pre>
+</section>
+
+
+<br>
+<hr>
+<section id="56">
+<h3>Step 56:</h3>
+<a href="#55">Back</a>&nbsp;<a href="#57">Forward</a><br>
+<pre>
+game_state = {
+    'wordle_words_file': wordle_words.txt, 
+    'all_words_file': english_dict.txt,
+    'max_guesses': 6, 'word_length': 5, 
+    'secret_word': print,
+    'status': playing, 
+    'i': 3, 'j': 5, 
+    'grid': 
+         [ ['s', 'h', 'a', 'r', 'e']
+           ['s', 'h', 'a', 'r', 'e']
+           ['s', 'h', 'a', 'r', 'e']
+           ['s', 'h', 'a', 'r', 'e']
+           ['', '', '', '', '']
+           ['', '', '', '', ''] ], 
+    'colour_grid': 
+         [ ['-', '-', '-', 'y', '-']
+           ['-', '-', '-', 'y', '-']
+           ['-', '-', '-', 'y', '-']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w'] ],
+    'popup_queue': []
+    }
+
+s	h	a	r	e
+⬜	⬜	⬜	🟨	⬜
+-	-	-	-	-	
+s	h	a	r	e
+⬜	⬜	⬜	🟨	⬜
+-	-	-	-	-	
+s	h	a	r	e
+⬜	⬜	⬜	🟨	⬜
+-	-	-	-	-	
+s	h	a	r	e
+?	?	?	?	?
+-	-	-	-	-	
+
+
+last command entered: e
+<pre>
+</section>
+
+
+<br>
+<hr>
+<section id="57">
+<h3>Step 57:</h3>
+<a href="#56">Back</a>&nbsp;<a href="#58">Forward</a><br>
+<pre>
+game_state = {
+    'wordle_words_file': wordle_words.txt, 
+    'all_words_file': english_dict.txt,
+    'max_guesses': 6, 'word_length': 5, 
+    'secret_word': print,
+    'status': playing, 
+    'i': 4, 'j': 0, 
+    'grid': 
+         [ ['s', 'h', 'a', 'r', 'e']
+           ['s', 'h', 'a', 'r', 'e']
+           ['s', 'h', 'a', 'r', 'e']
+           ['s', 'h', 'a', 'r', 'e']
+           ['', '', '', '', '']
+           ['', '', '', '', ''] ], 
+    'colour_grid': 
+         [ ['-', '-', '-', 'y', '-']
+           ['-', '-', '-', 'y', '-']
+           ['-', '-', '-', 'y', '-']
+           ['-', '-', '-', 'y', '-']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w'] ],
+    'popup_queue': []
+    }
+
+s	h	a	r	e
+⬜	⬜	⬜	🟨	⬜
+-	-	-	-	-	
+s	h	a	r	e
+⬜	⬜	⬜	🟨	⬜
+-	-	-	-	-	
+s	h	a	r	e
+⬜	⬜	⬜	🟨	⬜
+-	-	-	-	-	
+s	h	a	r	e
+⬜	⬜	⬜	🟨	⬜
+-	-	-	-	-	
+				
+?	?	?	?	?
+-	-	-	-	-	
+
+
+last command entered: enter
+<pre>
+</section>
+
+
+<br>
+<hr>
+<section id="58">
+<h3>Step 58:</h3>
+<a href="#57">Back</a>&nbsp;<a href="#59">Forward</a><br>
+<pre>
+game_state = {
+    'wordle_words_file': wordle_words.txt, 
+    'all_words_file': english_dict.txt,
+    'max_guesses': 6, 'word_length': 5, 
+    'secret_word': print,
+    'status': playing, 
+    'i': 4, 'j': 1, 
+    'grid': 
+         [ ['s', 'h', 'a', 'r', 'e']
+           ['s', 'h', 'a', 'r', 'e']
+           ['s', 'h', 'a', 'r', 'e']
+           ['s', 'h', 'a', 'r', 'e']
+           ['t', '', '', '', '']
+           ['', '', '', '', ''] ], 
+    'colour_grid': 
+         [ ['-', '-', '-', 'y', '-']
+           ['-', '-', '-', 'y', '-']
+           ['-', '-', '-', 'y', '-']
+           ['-', '-', '-', 'y', '-']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w'] ],
+    'popup_queue': []
+    }
+
+s	h	a	r	e
+⬜	⬜	⬜	🟨	⬜
+-	-	-	-	-	
+s	h	a	r	e
+⬜	⬜	⬜	🟨	⬜
+-	-	-	-	-	
+s	h	a	r	e
+⬜	⬜	⬜	🟨	⬜
+-	-	-	-	-	
+s	h	a	r	e
+⬜	⬜	⬜	🟨	⬜
+-	-	-	-	-	
+t				
+?	?	?	?	?
+-	-	-	-	-	
+
+
+last command entered: t
+<pre>
+</section>
+
+
+<br>
+<hr>
+<section id="59">
+<h3>Step 59:</h3>
+<a href="#58">Back</a>&nbsp;<a href="#60">Forward</a><br>
+<pre>
+game_state = {
+    'wordle_words_file': wordle_words.txt, 
+    'all_words_file': english_dict.txt,
+    'max_guesses': 6, 'word_length': 5, 
+    'secret_word': print,
+    'status': playing, 
+    'i': 4, 'j': 2, 
+    'grid': 
+         [ ['s', 'h', 'a', 'r', 'e']
+           ['s', 'h', 'a', 'r', 'e']
+           ['s', 'h', 'a', 'r', 'e']
+           ['s', 'h', 'a', 'r', 'e']
+           ['t', 'o', '', '', '']
+           ['', '', '', '', ''] ], 
+    'colour_grid': 
+         [ ['-', '-', '-', 'y', '-']
+           ['-', '-', '-', 'y', '-']
+           ['-', '-', '-', 'y', '-']
+           ['-', '-', '-', 'y', '-']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w'] ],
+    'popup_queue': []
+    }
+
+s	h	a	r	e
+⬜	⬜	⬜	🟨	⬜
+-	-	-	-	-	
+s	h	a	r	e
+⬜	⬜	⬜	🟨	⬜
+-	-	-	-	-	
+s	h	a	r	e
+⬜	⬜	⬜	🟨	⬜
+-	-	-	-	-	
+s	h	a	r	e
+⬜	⬜	⬜	🟨	⬜
+-	-	-	-	-	
+t	o			
+?	?	?	?	?
+-	-	-	-	-	
+
+
+last command entered: o
+<pre>
+</section>
+
+
+<br>
+<hr>
+<section id="60">
+<h3>Step 60:</h3>
+<a href="#59">Back</a>&nbsp;<a href="#61">Forward</a><br>
+<pre>
+game_state = {
+    'wordle_words_file': wordle_words.txt, 
+    'all_words_file': english_dict.txt,
+    'max_guesses': 6, 'word_length': 5, 
+    'secret_word': print,
+    'status': playing, 
+    'i': 4, 'j': 3, 
+    'grid': 
+         [ ['s', 'h', 'a', 'r', 'e']
+           ['s', 'h', 'a', 'r', 'e']
+           ['s', 'h', 'a', 'r', 'e']
+           ['s', 'h', 'a', 'r', 'e']
+           ['t', 'o', 'u', '', '']
+           ['', '', '', '', ''] ], 
+    'colour_grid': 
+         [ ['-', '-', '-', 'y', '-']
+           ['-', '-', '-', 'y', '-']
+           ['-', '-', '-', 'y', '-']
+           ['-', '-', '-', 'y', '-']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w'] ],
+    'popup_queue': []
+    }
+
+s	h	a	r	e
+⬜	⬜	⬜	🟨	⬜
+-	-	-	-	-	
+s	h	a	r	e
+⬜	⬜	⬜	🟨	⬜
+-	-	-	-	-	
+s	h	a	r	e
+⬜	⬜	⬜	🟨	⬜
+-	-	-	-	-	
+s	h	a	r	e
+⬜	⬜	⬜	🟨	⬜
+-	-	-	-	-	
+t	o	u		
+?	?	?	?	?
+-	-	-	-	-	
+
+
+last command entered: u
+<pre>
+</section>
+
+
+<br>
+<hr>
+<section id="61">
+<h3>Step 61:</h3>
+<a href="#60">Back</a>&nbsp;<a href="#62">Forward</a><br>
+<pre>
+game_state = {
+    'wordle_words_file': wordle_words.txt, 
+    'all_words_file': english_dict.txt,
+    'max_guesses': 6, 'word_length': 5, 
+    'secret_word': print,
+    'status': playing, 
+    'i': 4, 'j': 4, 
+    'grid': 
+         [ ['s', 'h', 'a', 'r', 'e']
+           ['s', 'h', 'a', 'r', 'e']
+           ['s', 'h', 'a', 'r', 'e']
+           ['s', 'h', 'a', 'r', 'e']
+           ['t', 'o', 'u', 'g', '']
+           ['', '', '', '', ''] ], 
+    'colour_grid': 
+         [ ['-', '-', '-', 'y', '-']
+           ['-', '-', '-', 'y', '-']
+           ['-', '-', '-', 'y', '-']
+           ['-', '-', '-', 'y', '-']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w'] ],
+    'popup_queue': []
+    }
+
+s	h	a	r	e
+⬜	⬜	⬜	🟨	⬜
+-	-	-	-	-	
+s	h	a	r	e
+⬜	⬜	⬜	🟨	⬜
+-	-	-	-	-	
+s	h	a	r	e
+⬜	⬜	⬜	🟨	⬜
+-	-	-	-	-	
+s	h	a	r	e
+⬜	⬜	⬜	🟨	⬜
+-	-	-	-	-	
+t	o	u	g	
+?	?	?	?	?
+-	-	-	-	-	
+
+
+last command entered: g
+<pre>
+</section>
+
+
+<br>
+<hr>
+<section id="62">
+<h3>Step 62:</h3>
+<a href="#61">Back</a>&nbsp;<a href="#63">Forward</a><br>
+<pre>
+game_state = {
+    'wordle_words_file': wordle_words.txt, 
+    'all_words_file': english_dict.txt,
+    'max_guesses': 6, 'word_length': 5, 
+    'secret_word': print,
+    'status': playing, 
+    'i': 4, 'j': 5, 
+    'grid': 
+         [ ['s', 'h', 'a', 'r', 'e']
+           ['s', 'h', 'a', 'r', 'e']
+           ['s', 'h', 'a', 'r', 'e']
+           ['s', 'h', 'a', 'r', 'e']
+           ['t', 'o', 'u', 'g', 'h']
+           ['', '', '', '', ''] ], 
+    'colour_grid': 
+         [ ['-', '-', '-', 'y', '-']
+           ['-', '-', '-', 'y', '-']
+           ['-', '-', '-', 'y', '-']
+           ['-', '-', '-', 'y', '-']
+           ['w', 'w', 'w', 'w', 'w']
+           ['w', 'w', 'w', 'w', 'w'] ],
+    'popup_queue': []
+    }
+
+s	h	a	r	e
+⬜	⬜	⬜	🟨	⬜
+-	-	-	-	-	
+s	h	a	r	e
+⬜	⬜	⬜	🟨	⬜
+-	-	-	-	-	
+s	h	a	r	e
+⬜	⬜	⬜	🟨	⬜
+-	-	-	-	-	
+s	h	a	r	e
+⬜	⬜	⬜	🟨	⬜
+-	-	-	-	-	
+t	o	u	g	h
+?	?	?	?	?
+-	-	-	-	-	
+
+
+last command entered: h
+<pre>
+</section>
+
+
+<br>
+<hr>
+<section id="63">
+<h3>Step 63:</h3>
+<a href="#62">Back</a>&nbsp;<a href="#64">Forward</a><br>
+<pre>
+game_state = {
+    'wordle_words_file': wordle_words.txt, 
+    'all_words_file': english_dict.txt,
+    'max_guesses': 6, 'word_length': 5, 
+    'secret_word': print,
+    'status': playing, 
+    'i': 5, 'j': 0, 
+    'grid': 
+         [ ['s', 'h', 'a', 'r', 'e']
+           ['s', 'h', 'a', 'r', 'e']
+           ['s', 'h', 'a', 'r', 'e']
+           ['s', 'h', 'a', 'r', 'e']
+           ['t', 'o', 'u', 'g', 'h']
+           ['', '', '', '', ''] ], 
+    'colour_grid': 
+         [ ['-', '-', '-', 'y', '-']
+           ['-', '-', '-', 'y', '-']
+           ['-', '-', '-', 'y', '-']
+           ['-', '-', '-', 'y', '-']
+           ['y', '-', '-', '-', '-']
+           ['w', 'w', 'w', 'w', 'w'] ],
+    'popup_queue': []
+    }
+
+s	h	a	r	e
+⬜	⬜	⬜	🟨	⬜
+-	-	-	-	-	
+s	h	a	r	e
+⬜	⬜	⬜	🟨	⬜
+-	-	-	-	-	
+s	h	a	r	e
+⬜	⬜	⬜	🟨	⬜
+-	-	-	-	-	
+s	h	a	r	e
+⬜	⬜	⬜	🟨	⬜
+-	-	-	-	-	
+t	o	u	g	h
+🟨	⬜	⬜	⬜	⬜
+-	-	-	-	-	
+				
+?	?	?	?	?
+-	-	-	-	-	
+
+
+last command entered: enter
+<pre>
+</section>
+
+
+<br>
+<hr>
+<section id="64">
+<h3>Step 64:</h3>
+<a href="#63">Back</a>&nbsp;<a href="#65">Forward</a><br>
+<pre>
+game_state = {
+    'wordle_words_file': wordle_words.txt, 
+    'all_words_file': english_dict.txt,
+    'max_guesses': 6, 'word_length': 5, 
+    'secret_word': print,
+    'status': playing, 
+    'i': 5, 'j': 1, 
+    'grid': 
+         [ ['s', 'h', 'a', 'r', 'e']
+           ['s', 'h', 'a', 'r', 'e']
+           ['s', 'h', 'a', 'r', 'e']
+           ['s', 'h', 'a', 'r', 'e']
+           ['t', 'o', 'u', 'g', 'h']
+           ['c', '', '', '', ''] ], 
+    'colour_grid': 
+         [ ['-', '-', '-', 'y', '-']
+           ['-', '-', '-', 'y', '-']
+           ['-', '-', '-', 'y', '-']
+           ['-', '-', '-', 'y', '-']
+           ['y', '-', '-', '-', '-']
+           ['w', 'w', 'w', 'w', 'w'] ],
+    'popup_queue': []
+    }
+
+s	h	a	r	e
+⬜	⬜	⬜	🟨	⬜
+-	-	-	-	-	
+s	h	a	r	e
+⬜	⬜	⬜	🟨	⬜
+-	-	-	-	-	
+s	h	a	r	e
+⬜	⬜	⬜	🟨	⬜
+-	-	-	-	-	
+s	h	a	r	e
+⬜	⬜	⬜	🟨	⬜
+-	-	-	-	-	
+t	o	u	g	h
+🟨	⬜	⬜	⬜	⬜
+-	-	-	-	-	
+c				
+?	?	?	?	?
+-	-	-	-	-	
+
+
+last command entered: c
+<pre>
+</section>
+
+
+<br>
+<hr>
+<section id="65">
+<h3>Step 65:</h3>
+<a href="#64">Back</a>&nbsp;<a href="#66">Forward</a><br>
+<pre>
+game_state = {
+    'wordle_words_file': wordle_words.txt, 
+    'all_words_file': english_dict.txt,
+    'max_guesses': 6, 'word_length': 5, 
+    'secret_word': print,
+    'status': playing, 
+    'i': 5, 'j': 2, 
+    'grid': 
+         [ ['s', 'h', 'a', 'r', 'e']
+           ['s', 'h', 'a', 'r', 'e']
+           ['s', 'h', 'a', 'r', 'e']
+           ['s', 'h', 'a', 'r', 'e']
+           ['t', 'o', 'u', 'g', 'h']
+           ['c', 'r', '', '', ''] ], 
+    'colour_grid': 
+         [ ['-', '-', '-', 'y', '-']
+           ['-', '-', '-', 'y', '-']
+           ['-', '-', '-', 'y', '-']
+           ['-', '-', '-', 'y', '-']
+           ['y', '-', '-', '-', '-']
+           ['w', 'w', 'w', 'w', 'w'] ],
+    'popup_queue': []
+    }
+
+s	h	a	r	e
+⬜	⬜	⬜	🟨	⬜
+-	-	-	-	-	
+s	h	a	r	e
+⬜	⬜	⬜	🟨	⬜
+-	-	-	-	-	
+s	h	a	r	e
+⬜	⬜	⬜	🟨	⬜
+-	-	-	-	-	
+s	h	a	r	e
+⬜	⬜	⬜	🟨	⬜
+-	-	-	-	-	
+t	o	u	g	h
+🟨	⬜	⬜	⬜	⬜
+-	-	-	-	-	
+c	r			
+?	?	?	?	?
+-	-	-	-	-	
+
+
+last command entered: r
+<pre>
+</section>
+
+
+<br>
+<hr>
+<section id="66">
+<h3>Step 66:</h3>
+<a href="#65">Back</a>&nbsp;<a href="#67">Forward</a><br>
+<pre>
+game_state = {
+    'wordle_words_file': wordle_words.txt, 
+    'all_words_file': english_dict.txt,
+    'max_guesses': 6, 'word_length': 5, 
+    'secret_word': print,
+    'status': playing, 
+    'i': 5, 'j': 3, 
+    'grid': 
+         [ ['s', 'h', 'a', 'r', 'e']
+           ['s', 'h', 'a', 'r', 'e']
+           ['s', 'h', 'a', 'r', 'e']
+           ['s', 'h', 'a', 'r', 'e']
+           ['t', 'o', 'u', 'g', 'h']
+           ['c', 'r', 'u', '', ''] ], 
+    'colour_grid': 
+         [ ['-', '-', '-', 'y', '-']
+           ['-', '-', '-', 'y', '-']
+           ['-', '-', '-', 'y', '-']
+           ['-', '-', '-', 'y', '-']
+           ['y', '-', '-', '-', '-']
+           ['w', 'w', 'w', 'w', 'w'] ],
+    'popup_queue': []
+    }
+
+s	h	a	r	e
+⬜	⬜	⬜	🟨	⬜
+-	-	-	-	-	
+s	h	a	r	e
+⬜	⬜	⬜	🟨	⬜
+-	-	-	-	-	
+s	h	a	r	e
+⬜	⬜	⬜	🟨	⬜
+-	-	-	-	-	
+s	h	a	r	e
+⬜	⬜	⬜	🟨	⬜
+-	-	-	-	-	
+t	o	u	g	h
+🟨	⬜	⬜	⬜	⬜
+-	-	-	-	-	
+c	r	u		
+?	?	?	?	?
+-	-	-	-	-	
+
+
+last command entered: u
+<pre>
+</section>
+
+
+<br>
+<hr>
+<section id="67">
+<h3>Step 67:</h3>
+<a href="#66">Back</a>&nbsp;<a href="#68">Forward</a><br>
+<pre>
+game_state = {
+    'wordle_words_file': wordle_words.txt, 
+    'all_words_file': english_dict.txt,
+    'max_guesses': 6, 'word_length': 5, 
+    'secret_word': print,
+    'status': playing, 
+    'i': 5, 'j': 4, 
+    'grid': 
+         [ ['s', 'h', 'a', 'r', 'e']
+           ['s', 'h', 'a', 'r', 'e']
+           ['s', 'h', 'a', 'r', 'e']
+           ['s', 'h', 'a', 'r', 'e']
+           ['t', 'o', 'u', 'g', 'h']
+           ['c', 'r', 'u', 's', ''] ], 
+    'colour_grid': 
+         [ ['-', '-', '-', 'y', '-']
+           ['-', '-', '-', 'y', '-']
+           ['-', '-', '-', 'y', '-']
+           ['-', '-', '-', 'y', '-']
+           ['y', '-', '-', '-', '-']
+           ['w', 'w', 'w', 'w', 'w'] ],
+    'popup_queue': []
+    }
+
+s	h	a	r	e
+⬜	⬜	⬜	🟨	⬜
+-	-	-	-	-	
+s	h	a	r	e
+⬜	⬜	⬜	🟨	⬜
+-	-	-	-	-	
+s	h	a	r	e
+⬜	⬜	⬜	🟨	⬜
+-	-	-	-	-	
+s	h	a	r	e
+⬜	⬜	⬜	🟨	⬜
+-	-	-	-	-	
+t	o	u	g	h
+🟨	⬜	⬜	⬜	⬜
+-	-	-	-	-	
+c	r	u	s	
+?	?	?	?	?
+-	-	-	-	-	
+
+
+last command entered: s
+<pre>
+</section>
+
+
+<br>
+<hr>
+<section id="68">
+<h3>Step 68:</h3>
+<a href="#67">Back</a>&nbsp;<a href="#69">Forward</a><br>
+<pre>
+game_state = {
+    'wordle_words_file': wordle_words.txt, 
+    'all_words_file': english_dict.txt,
+    'max_guesses': 6, 'word_length': 5, 
+    'secret_word': print,
+    'status': playing, 
+    'i': 5, 'j': 5, 
+    'grid': 
+         [ ['s', 'h', 'a', 'r', 'e']
+           ['s', 'h', 'a', 'r', 'e']
+           ['s', 'h', 'a', 'r', 'e']
+           ['s', 'h', 'a', 'r', 'e']
+           ['t', 'o', 'u', 'g', 'h']
+           ['c', 'r', 'u', 's', 't'] ], 
+    'colour_grid': 
+         [ ['-', '-', '-', 'y', '-']
+           ['-', '-', '-', 'y', '-']
+           ['-', '-', '-', 'y', '-']
+           ['-', '-', '-', 'y', '-']
+           ['y', '-', '-', '-', '-']
+           ['w', 'w', 'w', 'w', 'w'] ],
+    'popup_queue': []
+    }
+
+s	h	a	r	e
+⬜	⬜	⬜	🟨	⬜
+-	-	-	-	-	
+s	h	a	r	e
+⬜	⬜	⬜	🟨	⬜
+-	-	-	-	-	
+s	h	a	r	e
+⬜	⬜	⬜	🟨	⬜
+-	-	-	-	-	
+s	h	a	r	e
+⬜	⬜	⬜	🟨	⬜
+-	-	-	-	-	
+t	o	u	g	h
+🟨	⬜	⬜	⬜	⬜
+-	-	-	-	-	
+c	r	u	s	t
+?	?	?	?	?
+-	-	-	-	-	
+
+
+last command entered: t
+<pre>
+</section>
+
+
+<br>
+<hr>
+<section id="69">
+<h3>Step 69:</h3>
+<a href="#68">Back</a>&nbsp;<a href="#70">Forward</a><br>
+<pre>
+game_state = {
+    'wordle_words_file': wordle_words.txt, 
+    'all_words_file': english_dict.txt,
+    'max_guesses': 6, 'word_length': 5, 
+    'secret_word': print,
+    'status': lost, 
+    'i': 6, 'j': 0, 
+    'grid': 
+         [ ['s', 'h', 'a', 'r', 'e']
+           ['s', 'h', 'a', 'r', 'e']
+           ['s', 'h', 'a', 'r', 'e']
+           ['s', 'h', 'a', 'r', 'e']
+           ['t', 'o', 'u', 'g', 'h']
+           ['c', 'r', 'u', 's', 't'] ], 
+    'colour_grid': 
+         [ ['-', '-', '-', 'y', '-']
+           ['-', '-', '-', 'y', '-']
+           ['-', '-', '-', 'y', '-']
+           ['-', '-', '-', 'y', '-']
+           ['y', '-', '-', '-', '-']
+           ['-', 'g', '-', '-', 'g'] ],
+    'popup_queue': []
+    }
+
+s	h	a	r	e
+⬜	⬜	⬜	🟨	⬜
+s	h	a	r	e
+⬜	⬜	⬜	🟨	⬜
+s	h	a	r	e
+⬜	⬜	⬜	🟨	⬜
+s	h	a	r	e
+⬜	⬜	⬜	🟨	⬜
+t	o	u	g	h
+🟨	⬜	⬜	⬜	⬜
+c	r	u	s	t
+⬜	🟩	⬜	⬜	🟩
+
+
+last command entered: enter
+<pre>
+</section>
+
+
+<br>
+<hr>
+<section id="70">
+<h3>Step 70:</h3>
+<a href="#69">Back</a>&nbsp;<a href="#71">Forward</a><br>
+<pre>
+game_state = {
+    'wordle_words_file': wordle_words.txt, 
+    'all_words_file': english_dict.txt,
+    'max_guesses': 6, 'word_length': 5, 
+    'secret_word': print,
+    'status': lost, 
+    'i': 6, 'j': 0, 
+    'grid': 
+         [ ['s', 'h', 'a', 'r', 'e']
+           ['s', 'h', 'a', 'r', 'e']
+           ['s', 'h', 'a', 'r', 'e']
+           ['s', 'h', 'a', 'r', 'e']
+           ['t', 'o', 'u', 'g', 'h']
+           ['c', 'r', 'u', 's', 't'] ], 
+    'colour_grid': 
+         [ ['-', '-', '-', 'y', '-']
+           ['-', '-', '-', 'y', '-']
+           ['-', '-', '-', 'y', '-']
+           ['-', '-', '-', 'y', '-']
+           ['y', '-', '-', '-', '-']
+           ['-', 'g', '-', '-', 'g'] ],
+    'popup_queue': [('You lost!!!!', 'text'), ('The word was print', 'text')]
+    }
+
+The word was print
+You lost!!!!
+s	h	a	r	e
+⬜	⬜	⬜	🟨	⬜
+s	h	a	r	e
+⬜	⬜	⬜	🟨	⬜
+s	h	a	r	e
+⬜	⬜	⬜	🟨	⬜
+s	h	a	r	e
+⬜	⬜	⬜	🟨	⬜
+t	o	u	g	h
+🟨	⬜	⬜	⬜	⬜
+c	r	u	s	t
+⬜	🟩	⬜	⬜	🟩
+
+
+last command entered: enter
+<pre>
+</section>
+
+
+</body>
+</html>
